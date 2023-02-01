@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>FLEXITOOLS: Background Remover</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='./img/logo.png') }}" alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li class="hover-underline-animation"><a href="{{url_for('index')}}">All tools</a></li>
+            <li class="hover-underline-animation"><a href="#">How does it work?</a></li>
+        </ul>
+    </nav> 
+    <div class="main-content">
+        <div class="work-display">
+            <img src="{{ url_for('static', filename='./img/background_remover.png') }}" alt="">
+            <div>
+                <h2>Remove Background</h2>
+                <h2>From an Image with </h2>
+                <h2>the Help of <strong>AI!</strong></h2>
+            </div>
+        </div>
+        <div class="uploader">
+            <!-- <button class="upload-button">Upload Image</button>
+            <p>or paste the url <a href="#">here</a></p> -->
+            <!-- <form action = "http://localhost:5000/uploader" method = "POST"enctype = "multipart/form-data">
+                <input class="upload-button"type = "file" name = "file" />
+                <input class="upload-button" type = "submit"/>
+            </form> -->
+            <form action="/uploader" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" class="upload-button" style="width: 60%;">
+                <input type="submit" class="upload-button" value="Upload" id="submit_button">
+            </form>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+
+
+<!-- <script>
+    document.getElementById("submit_button").onclick = function() {
+      document.querySelector("input[type=file]").click();
+    };
+</script> -->

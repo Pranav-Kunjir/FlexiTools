@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>FLEXITOOLS</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='./img/logo.png') }}" alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li class="hover-underline-animation"><a href="#">About</a></li>
+            <li class="hover-underline-animation"><a href="#">Learn More</a></li>
+        </ul>
+    </nav>    
+    <div class="main-container">
+        <div class="heading">
+          <h1 class="heading__title">Simple Tools to Help You!</h1>
+          <p class="heading__credits"><a class="heading__link" target="_blank" href="#">Made by Pranav with ❤️</a></p>
+        </div>
+        <div class="cards">
+          <div class="card card-5">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title">Generate Names for you projects, tools, fictional charectors</h2>
+            <p class="card__apply">
+              <a class="card__link" href="#">Use Now<i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="card card-2">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title">Bacground removal, with in house algorithm. Download unlimited high quality photos.</h2>
+            <p class="card__apply">
+              <a class="card__link" href="{{url_for('remove_background')}}">Use<i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="card card-3">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title">Image upscaler and Downscaler using open cv in python</h2>
+            <p class="card__apply">
+              <a class="card__link" href="#">Use<i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="card card-4">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title">Generate Emails, and blogs with the help of Ai</h2>
+            <p class="card__apply">
+              <a class="card__link" href="#">Use<i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="card card-1">
+            <div class="card__icon"><i class="fas fa-bolt"></i></div>
+            <p class="card__exit"><i class="fas fa-times"></i></p>
+            <h2 class="card__title">QR GENERATOR, Uses a python package to covnert links into scanable text.</h2>
+            <p class="card__apply">
+              <a class="card__link" href="#">Use<i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+         
+        </div>
+      </div>
+</body>
+</html>
